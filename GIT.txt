@@ -1,0 +1,70 @@
+GIT
+
+git init
+(iniciar git)
+git status
+(ver el estado de git)
+git add .
+(para hacer seguimiento de los archivos, antes aparecían en rojo, ahora en verde al ver el status)
+
+git reset index.html
+(dejar de hacer sgto de un archivo concreto)
+
+git add index.html
+(añado de nuevo el archivo al escenario)
+
+git add images/*
+(añadir una carpeta concreta con su contenido)
+
+commit
+(se guardan todos excepto de lo que se haya hecho reset)
+
+git config --global user.name "Nieves"
+git config --global user.mail "sevein_cd@hotmail.com"
+git config --global -e
+git commit -m "Mi primer commit"
+git commit -am "nuevo commit" (se colocó en el escenario y también se hizo commit del escenario actualizado)
+
+
+ESC :wq! (para guardar)
+     :q! (para salir sin guardar)
+
+---- Si modifico un archivo, he borrado una carpeta completa y quiero recuperarlo en el momento que había hecho commit, se puede recuperar:
+git checkout -- .
+
+git log
+(ver la información de los commits realizados con sus titulos y fechas)
+
+git branch
+(ver en qué rama estamos trabajando)
+
+git branch -m master main
+(cambiar el nombre de la rama master por main)
+
+git config --global init.defaultBranch main
+(para que se llame en todas las ramas de distintos repositorios siempre de la misma forma: main)
+
+git config --global -e
+(ver la configuración actual)
+
+git add *.html
+(se añaden todos los archivos de esa extensión)
+
+git add js/*js
+(añadir todos los archivos javascript que están en un directorio js)
+
+!!GIT no hace seguimiento de carpetas que están vacías
+
+git config --global alias.s "status --short"
+(para crear un comando más corto: ahora con escribir git s nos va a hacer lo mismo que si escribimos git status --short)
+
+git config --global alias.lg "log --oneline"
+
+git status
+git reflog
+-- recuperar versiones anteriores
+git reset --hard (numero de version)
+git reset --soft (num version)
+git reset --mixed
+
+
